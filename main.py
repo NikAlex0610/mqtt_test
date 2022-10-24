@@ -39,7 +39,7 @@ while cap.isOpened():
 
                 normalizedLandmark = handLandmarks.landmark[point]
 
-                points.append((int(10*normalizedLandmark.x), int(10*normalizedLandmark.y), int(10*normalizedLandmark.z)))
+                points.append((int(10*normalizedLandmark.x), int(10*normalizedLandmark.y), int(10*normalizedLandmark.z))) # потеря памяти
 
         client.publish('points', json.dumps(points))        
 
